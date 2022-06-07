@@ -5,16 +5,22 @@ import './App.css';
 
 function App() {
   const [color, setColor] = useState('');
-
-  const handleColorChange = (color) => {
-    setColor(color);
-  }
+  const [hexValue, setHexValue] = useState('');
+  const [isDarkText, setIsDarkText] = useState(true);
   return (
     <div className='App'>
-      <Box color={color} />
+      <Box
+        color={color}
+        hexValue={hexValue}
+        isDarkText={isDarkText}
+      />
       <Input
         color={color}
-        handleColorChange={handleColorChange} />
+        setColor={setColor}
+        setHexValue={setHexValue}
+        isDarkText={isDarkText}
+        setIsDarkText={setIsDarkText}
+      />
     </div>
   );
 }

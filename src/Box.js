@@ -1,8 +1,12 @@
-const Box = ({color}) => {
+const Box = ({ color , hexValue, isDarkText}) => {
     return (
-        <div className="box" style={{backgroundColor:color}}>
+        <section className="box" style={{
+            backgroundColor: color,
+            color:isDarkText ? "#000" : "#FFF"
+            }}>
             <span>{color ? color : 'No Color'}</span>
-        </div>
+            <span>{hexValue ? hexValue : null}</span>
+        </section>
     )
 }
 
